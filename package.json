@@ -1,0 +1,17 @@
+{
+  "name": "grid-flexbox",
+  "version": "1.0.0",
+  "description": "Aplicando lo que aprendi del curso de Grid y Flexbox de Platzi con @teffcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "platzi",
+    "flexbox",
+    "grid",
+    "css"
+  ],
+  "author": "Luis Rodriguez - DarkusPhantom - darkusphantom13@gmail.com",
+  "license": "MIT"
+}
