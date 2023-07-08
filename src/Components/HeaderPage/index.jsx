@@ -1,4 +1,5 @@
 import Icon from "../../assets/icons/Pokemon-48px.svg";
+import './styles.css'
 
 const HeaderPage = () => {
   return (

@@ -1,12 +1,14 @@
-import { Track } from "../Track";
+import "./DisplayTrack.css";
 
 const DisplayTrack = ({ data }) => {
   return (
-    <div className="cards">
-      <div className="container-cards">
-        {data.map((track, i) => (
-          <Track key={i} src={track.src} alt={track.alt} />
-        ))}
+    <div className="tracks">
+      <div className="track-image">
+        <img src={data.src} alt={data.name} width="240" height="240" />
+      </div>
+      <div className="track-description">
+        <p className="track-title">El Jardinero</p>
+        <p className="track-artist">Wilfredo Vargas</p>
       </div>
     </div>
   );

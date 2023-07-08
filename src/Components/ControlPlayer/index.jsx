@@ -1,6 +1,7 @@
 import SkipToStartIcon from "../../assets/icons/skip-to-start-48.svg";
 import RewindIcon from "../../assets/icons/Rewind-48px.svg";
 import PlayIcon from "../../assets/icons/Play-48px.svg";
+import "./ControlPlayer.css";
 
 const ControlPlayer = () => {
   return (

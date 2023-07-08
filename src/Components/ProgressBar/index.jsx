@@ -1,3 +1,5 @@
+import "./ProgressBar.css";
+
 const ProgressBar = () => {
   return (
     <div className="song-progress">

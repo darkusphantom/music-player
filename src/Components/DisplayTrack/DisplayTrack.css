@@ -1,0 +1,50 @@
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 65px;
+}
+
+.track-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track-description p {
+  margin: 0;
+  text-align: center;
+  font-style: normal;
+  line-height: normal;
+}
+
+.track-description .track-title {
+  margin: 18px 0 14px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.track-description .track-artist {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.track-image {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+    -10px -10px 15px 0px rgba(255, 255, 255, 0.5),
+    10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  background: #4bc29f;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
