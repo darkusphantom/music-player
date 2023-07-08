@@ -28,7 +28,7 @@ const ControlPlayer = ({
   setCurrentSong,
   handleNext,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   /**
    * A reference to the animation frame of the audio playback.
    *
@@ -100,7 +100,7 @@ const ControlPlayer = ({
       </button>
 
       <button className="btn play" onClick={togglePause}>
-        {isPlaying ? <IoPlaySharp /> : <IoPauseSharp />}
+        {!isPlaying ? <IoPlaySharp /> : <IoPauseSharp />}
       </button>
 
       <button className="btn forward" onClick={skipForward}>
