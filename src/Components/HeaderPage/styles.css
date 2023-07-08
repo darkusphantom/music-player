@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.header .title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header .title p {
+  text-transform: uppercase;
+  font-weight: 700;
+}

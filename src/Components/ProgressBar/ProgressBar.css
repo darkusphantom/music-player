@@ -1,0 +1,33 @@
+.song-progress {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  --range-progress: 0;
+  width: 280px;
+  height: 14px;
+  background: #c4c4c4;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  background: #4bc29f;
+  width: var(--range-progress);
+}
+
+.time {
+  position: absolute;
+  top: 20px;
+  font-weight: 700;
+}
+
+.time.current {
+  left: -10px;
+}
+
+.time:not(.time.current) {
+  right: -10px;
+}
