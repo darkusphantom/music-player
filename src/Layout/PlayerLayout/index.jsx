@@ -1,5 +1,5 @@
 const PlayerLayout = ({ children }) => {
-  return <main className="songplayer">{children}</main>;
+  return <div className="inner">{children}</div>;
 };
 
 export { PlayerLayout };

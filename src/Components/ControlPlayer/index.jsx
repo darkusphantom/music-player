@@ -1,11 +1,10 @@
-import { Fragment } from "react";
 import SkipToStartIcon from "../../assets/icons/skip-to-start-48.svg";
 import RewindIcon from "../../assets/icons/Rewind-48px.svg";
 import PlayIcon from "../../assets/icons/Play-48px.svg";
 
 const ControlPlayer = () => {
   return (
-    <Fragment>
+    <footer className="buttons">
       <div className="btn previus">
         <img src={SkipToStartIcon} alt="previous" width="32" />
       </div>
@@ -21,7 +20,7 @@ const ControlPlayer = () => {
       <div className="btn next">
         <img src={SkipToStartIcon} alt="next" width="32" />
       </div>
-    </Fragment>
+    </footer>
   );
 };
 
