@@ -19,6 +19,7 @@
 .btn:nth-child(3) {
   width: 65px;
   height: 65px;
+  font-size: 32px;
 }
 
 .btn:nth-child(3) img {
@@ -31,9 +32,4 @@
 
 .btn:nth-child(4) img {
   margin-right: 4px;
-}
-
-.btn.next,
-.btn.forward {
-  transform: rotate(180deg);
 }

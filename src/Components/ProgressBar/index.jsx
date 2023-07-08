@@ -1,13 +1,25 @@
+import { formatTime } from "../../utils/time";
 import "./ProgressBar.css";
 
-const ProgressBar = () => {
+const ProgressBar = ({ progressBarRef, audioRef, timeProgress, duration }) => {
+  const handleProgressChange = () => {
+    audioRef.current.currentTime = progressBarRef.current.value;
+  };
+
+  const formatTimeProgress = formatTime(timeProgress);
+  const formatDuration = formatTime(duration);
+
   return (
     <div className="song-progress">
-      <div className="progress-bar">
-        <span></span>
-      </div>
-      <div className="song-status song-init">2:35</div>
-      <div className="song-status song-end">3:35</div>
+      <div className="time current">{formatTimeProgress}</div>
+      <input
+        className="progress-bar"
+        type="range"
+        ref={progressBarRef}
+        defaultValue="0"
+        onChange={handleProgressChange}
+      />
+      <div className="time">{formatDuration}</div>
     </div>
   );
 };

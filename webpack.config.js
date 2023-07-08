@@ -34,6 +34,14 @@ module.exports = {
           options: {},
         },
       },
+      {
+        test: /\.(png|jpe?g|gif|mp3|mp4)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
     ],
   },
   plugins: [

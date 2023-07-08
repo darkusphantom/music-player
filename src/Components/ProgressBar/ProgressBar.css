@@ -5,29 +5,29 @@
 }
 
 .progress-bar {
+  --range-progress: 0;
   width: 280px;
   height: 14px;
   background: #c4c4c4;
   position: relative;
 }
 
-.progress-bar span {
-  width: 215px;
-  height: 14px;
+.progress-bar::before {
+  content: "";
   background: #4bc29f;
-  position: absolute;
+  width: var(--range-progress);
 }
 
-.song-progress .song-status {
+.time {
   position: absolute;
   top: 20px;
   font-weight: 700;
 }
 
-.song-progress .song-init {
+.time.current {
   left: -10px;
 }
 
-.song-progress .song-end {
+.time:not(.time.current) {
   right: -10px;
 }
