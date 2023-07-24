@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HeaderPage } from "../Components/HeaderPage";
 import { ControlPlayer } from "../Components/ControlPlayer";
 import { PlayerLayout } from "../Layout/PlayerLayout";
@@ -6,6 +6,7 @@ import { DisplayTrack } from "../Components/DisplayTrack";
 import { songs } from "../data/songs-example";
 import { ProgressBar } from "../Components/ProgressBar";
 import "./style.css";
+import { getAuthentication } from "../data/artistsAPI";
 
 const MediaPlayer = () => {
   const [trackIndex, setTrackIndex] = useState(0);
@@ -24,6 +25,11 @@ const MediaPlayer = () => {
       setCurrentSong(songs[trackIndex + 1]);
     }
   };
+
+  useEffect(() => {
+    getAuthentication();
+    // getAuthentication().then((data) => console.log(data));
+  }, []);
 
   return (
     <main className="songplayer">
