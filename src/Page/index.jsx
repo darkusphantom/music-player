@@ -5,7 +5,6 @@ import { PlayerLayout } from "../Layout/PlayerLayout";
 import { DisplayTrack } from "../Components/DisplayTrack";
 import { songs } from "../data/songs-example";
 import { ProgressBar } from "../Components/ProgressBar";
-import "./style.css";
 
 const MediaPlayer = () => {
   const [trackIndex, setTrackIndex] = useState(0);
@@ -26,36 +25,32 @@ const MediaPlayer = () => {
   };
 
   return (
-    <main className="songplayer">
+    <PlayerLayout>
       <HeaderPage />
-      <PlayerLayout>
-        <DisplayTrack
-          {...{
-            currentSong,
-            audioRef,
-            setDuration,
-            progressBarRef,
-            handleNext,
-          }}
-        />
-        <ProgressBar
-          {...{ progressBarRef, audioRef, timeProgress, duration }}
-        />
-        <ControlPlayer
-          {...{
-            audioRef,
-            progressBarRef,
-            duration,
-            setTimeProgress,
-            songs,
-            trackIndex,
-            setTrackIndex,
-            setCurrentSong,
-            handleNext,
-          }}
-        />
-      </PlayerLayout>
-    </main>
+      <DisplayTrack
+        {...{
+          currentSong,
+          audioRef,
+          setDuration,
+          progressBarRef,
+          handleNext,
+        }}
+      />
+      <ProgressBar {...{ progressBarRef, audioRef, timeProgress, duration }} />
+      <ControlPlayer
+        {...{
+          audioRef,
+          progressBarRef,
+          duration,
+          setTimeProgress,
+          songs,
+          trackIndex,
+          setTrackIndex,
+          setCurrentSong,
+          handleNext,
+        }}
+      />
+    </PlayerLayout>
   );
 };
 

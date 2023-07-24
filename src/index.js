@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { MediaPlayer } from "./Page";
 import "./styles/global.css";
+import "./styles/animations.css";
 
 const App = () => {
   return <MediaPlayer />;

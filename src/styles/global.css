@@ -1,12 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 :root {
-  --blue: #eaf0f8;
+  --color-primary: rgb(75, 194, 143);
+  --color-secundary: rgba(0, 155, 255, 1);
+
+  --bg: #eaf0f8;
+  --bg-gradient: linear-gradient(
+    190deg,
+    var(--color-primary) 10%,
+    var(--color-secundary) 91%
+  );
 }
 
 body {
   margin: 0;
-  background: var(--blue);
+  background: var(--bg);
   font-family: "Roboto", sans-serif;
 }
 
+.wave {
+  background: var(--bg-gradient);
+  animation: wave 3s ease-in-out infinite;
+}
+
+/* .wave::after {
+  content: "";
+  background: #000 repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  animation: wave 1s ease-in-out infinite;
+} */
